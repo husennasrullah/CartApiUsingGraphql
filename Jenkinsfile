@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('compile') {
             steps {
-                echo 'haloo dunia'
+                sh 'go build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'go test ./unittest'
             }
         }
     }
