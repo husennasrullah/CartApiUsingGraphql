@@ -14,6 +14,7 @@ var DataInventory = &InitiateData
 func main() {
 	productSchema := schema.CreateProductSchema()
 	cartSchema := schema.CreateCartSchema()
+	//test
 
 	handlerproduct := gqlhandler.New(&gqlhandler.Config{Schema: &productSchema})
 	handlerCart := gqlhandler.New(&gqlhandler.Config{Schema: &cartSchema})
